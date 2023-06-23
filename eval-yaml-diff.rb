@@ -5,20 +5,20 @@
 class EvalYamlDiff < Formula
   desc ""
   homepage ""
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.1/eval-yaml-diff_Darwin_x86_64.tar.gz"
-      sha256 "047a24142bdc0f3e0af6b8a648651bc717f195737ab02c320a6eec57299c0c49"
+    if Hardware::CPU.arm?
+      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.2/eval-yaml-diff_Darwin_arm64.tar.gz"
+      sha256 "636af12ebb04ffeda433f7fe85e8b1d707e70a777b4e0323759adde81a39eef6"
 
       def install
         bin.install "eval-yaml-diff"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.1/eval-yaml-diff_Darwin_arm64.tar.gz"
-      sha256 "0b738566ce2388067aaad92f944157c3472aa6fa8567239bd5bc3603783ab9a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.2/eval-yaml-diff_Darwin_x86_64.tar.gz"
+      sha256 "ab243265fae0c03ccb03abc2b89823b799a702bb551ea9007d693093bbc0eb84"
 
       def install
         bin.install "eval-yaml-diff"
@@ -28,16 +28,16 @@ class EvalYamlDiff < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.1/eval-yaml-diff_Linux_arm64.tar.gz"
-      sha256 "d20ba5acacc30c6248070a3a9dabf2d9f1136d02a52f1f05bc245b4a5d1f64ff"
+      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.2/eval-yaml-diff_Linux_arm64.tar.gz"
+      sha256 "3588a353a4dd1ae3bf530f651532ed14061db9506b962e3f99582ad69d8c021b"
 
       def install
         bin.install "eval-yaml-diff"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.1/eval-yaml-diff_Linux_x86_64.tar.gz"
-      sha256 "9b65fc3fe9f8c1e980a538a47afb7e81172c008b7eb12b3d179ccb0810bda78a"
+      url "https://github.com/yashirook/eval-yaml-diff/releases/download/v0.1.2/eval-yaml-diff_Linux_x86_64.tar.gz"
+      sha256 "f7e2a2198cd8601159edca42fff099eb7fed53de36869888386c421d76f3c18b"
 
       def install
         bin.install "eval-yaml-diff"
